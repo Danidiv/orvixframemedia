@@ -62,6 +62,13 @@
 }
 
 @media (max-width: 767px) {
+  .elementor-72 .elementor-element.elementor-element-626f651 .elementskit-menu-container {
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+  }
+
   .elementor-72 .elementor-element.elementor-element-38ea72a5 {
     min-height: 58px;
     padding-top: 4px !important;
