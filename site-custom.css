@@ -183,20 +183,28 @@
 }
 
 .orvix-portfolio-filters button {
-  border: 1px solid #b9c8dc;
-  border-radius: 999px;
+  align-items: center;
+  border: 1px solid #b9c8dc !important;
+  border-radius: 999px !important;
   background: #fff;
+  box-sizing: border-box;
   color: #171717;
   cursor: pointer;
+  display: inline-flex;
   font: inherit;
+  height: 54px;
+  justify-content: center;
+  line-height: 1;
+  overflow: hidden;
   padding: 10px 20px;
   transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
 .orvix-portfolio-filters button:hover,
 .orvix-portfolio-filters button.is-active {
-  border-color: var(--orvix-accent-rust);
-  background: var(--orvix-accent-rust);
+  border-color: var(--orvix-accent-rust) !important;
+  border-radius: 999px !important;
+  background: var(--orvix-accent-rust) !important;
   color: #fff;
 }
 
@@ -403,6 +411,7 @@
   }
 
   .orvix-portfolio-filters button {
+    height: 46px;
     padding: 8px 14px;
   }
 
