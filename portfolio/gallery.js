@@ -62,43 +62,37 @@
     activeImage = null;
   });
 
-  const videos = [...document.querySelectorAll(".elementor-element-37dfacd .elementor-widget-video")]
-    .map((widget) => {
-      const settings = JSON.parse(widget.getAttribute("data-settings") || "{}");
-      const source = settings.youtube_url;
-      if (!source) {
-        return null;
+  const replacementVideos = [
+    { videoId: "xRVTNaIZLB0", title: "Orvixframemedia Video" }
+  ];
+
+  const videos = replacementVideos
+    .filter((video) => {
+      if (videoIds.has(video.videoId)) {
+        return false;
       }
-
-      const url = new URL(source);
-      const path = url.pathname.split("/").filter(Boolean);
-      const videoId = url.hostname === "youtu.be"
-        ? path[0]
-        : path[0] === "shorts"
-          ? path[1]
-          : url.searchParams.get("v");
-
-      if (!videoId) {
-        throw new Error(`Could not read the YouTube video ID from ${source}.`);
-      }
-
-      if (videoIds.has(videoId)) {
-        return null;
-      }
-      videoIds.add(videoId);
-
-      return {
-        type: "video",
-        category: "videography",
-        title: "Orvixframemedia",
-        videoId
-      };
+      videoIds.add(video.videoId);
+      return true;
     })
-    .filter(Boolean);
+    .map((video) => ({
+      type: "video",
+      category: "videography",
+      title: video.title,
+      videoId: video.videoId
+    }));
+
+  const shuffle = (values) => {
+    const shuffled = [...values];
+    for (let index = shuffled.length - 1; index > 0; index -= 1) {
+      const randomIndex = Math.floor(Math.random() * (index + 1));
+      [shuffled[index], shuffled[randomIndex]] = [shuffled[randomIndex], shuffled[index]];
+    }
+    return shuffled;
+  };
 
   const items = [
     ...images.map((image) => ({ ...image, type: "image" })),
-    ...videos
+    ...shuffle(videos)
   ];
 
   const allCategoryLimit = 4;
