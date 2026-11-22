@@ -1,3 +1,27 @@
+:root {
+  --orvix-accent-rust: #9F3D1B;
+  --orvix-accent-bronze: #B28838;
+  --orvix-accent-gradient: linear-gradient(100deg, var(--orvix-accent-rust) 0%, var(--orvix-accent-bronze) 100%);
+  --wp--preset--color--pale-pink: var(--orvix-accent-rust);
+}
+
+.elementor-element-22dc050b .ekit-heading--title .title-gold,
+.elementor-element-22dc050b .ekit-heading--title .title-black {
+  background-image: var(--orvix-accent-gradient) !important;
+  background-clip: text !important;
+  -webkit-background-clip: text !important;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.elementor-963 .elementor-element.elementor-element-dd28c51 .elementor-button,
+.elementor-89 .elementor-element.elementor-element-0e6fed4 .elementor-button,
+.elementor-72 .elementor-element.elementor-element-dcdb5a6 .elementskit-btn,
+.elementor-143 .elementor-element.elementor-element-5210a3d .elementor-button {
+  background-color: var(--orvix-accent-rust);
+  background-image: var(--orvix-accent-gradient);
+}
+
 .elementor[data-elementor-type="wp-page"] .orvix-title-black {
   color: #171717 !important;
 }
@@ -5,4 +29,421 @@
 .elementor-107 .elementor-element-1c46d280 .elementor-heading-title {
   color: #171717 !important;
   -webkit-text-fill-color: #171717 !important;
+}
+
+@media (max-width: 767px) {
+  .ekit_menu_responsive_mobile .elementskit-menu-hamburger {
+    display: block !important;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-menu-container {
+    position: fixed !important;
+    top: 0 !important;
+    right: auto !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100vh !important;
+    height: 100dvh !important;
+    padding: 0 !important;
+    overflow: hidden auto !important;
+    background: #fff !important;
+    box-shadow: none !important;
+    transform: scaleY(0) !important;
+    transform-origin: top !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+    transition: transform 0.4s ease, visibility 0s linear 0.4s !important;
+    z-index: 10000 !important;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-menu-container.active {
+    transform: scaleY(1) !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+    transition: transform 0.4s ease, visibility 0s !important;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-menu-overlay {
+    display: none !important;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-nav-identity-panel {
+    position: absolute !important;
+    top: 11vh;
+    right: 12vw;
+    width: auto !important;
+    z-index: 2;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-nav-identity-panel .elementskit-menu-close {
+    float: none !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    color: #222 !important;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 1;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-navbar-nav {
+    position: absolute !important;
+    top: 24%;
+    left: 0;
+    display: flex !important;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start !important;
+    gap: 20px;
+    margin: 0 !important;
+    padding: 0 20px !important;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-navbar-nav > li {
+    width: auto !important;
+    margin: 0 !important;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-navbar-nav > li > a {
+    display: block;
+    padding: 0 !important;
+    color: #171717 !important;
+    font-size: clamp(20px, 3.5vw, 27px) !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    text-align: center;
+    text-decoration: none !important;
+    text-transform: uppercase;
+  }
+
+  .ekit_menu_responsive_mobile .elementskit-navbar-nav > li.current-menu-item > a,
+  .ekit_menu_responsive_mobile .elementskit-navbar-nav > li > a.active,
+  .ekit_menu_responsive_mobile .elementskit-navbar-nav > li > a:hover {
+    color: var(--e-global-color-primary) !important;
+  }
+}
+
+.elementor-143 .elementor-element-37dfacd {
+  display: none !important;
+}
+
+.elementor-143 .elementor-element.elementor-element-1d16dee > .elementor-background-overlay {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=2400&q=85");
+  background-position: center;
+  background-size: cover;
+  opacity: 1;
+}
+
+.elementor-143 .elementor-element.elementor-element-1d16dee .elementor-heading-title {
+  color: #fff;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+}
+
+.orvix-portfolio-gallery {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.orvix-portfolio-header {
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.orvix-portfolio-header h2 {
+  color: #171717;
+  font-size: clamp(30px, 4vw, 48px);
+  margin: 0 0 10px;
+}
+
+.orvix-portfolio-header p {
+  color: #555;
+  margin: 0;
+}
+
+.orvix-portfolio-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 32px;
+}
+
+.orvix-portfolio-filters button {
+  border: 1px solid #d5d0c8;
+  border-radius: 999px;
+  background: #fff;
+  color: #171717;
+  cursor: pointer;
+  font: inherit;
+  padding: 10px 20px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.orvix-portfolio-filters button:hover,
+.orvix-portfolio-filters button.is-active {
+  border-color: #b78d43;
+  background: #b78d43;
+  color: #fff;
+}
+
+.orvix-portfolio-filters button:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+}
+
+.orvix-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.orvix-portfolio-card {
+  aspect-ratio: 4 / 3;
+  background: #eee;
+  border-radius: 10px;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.orvix-portfolio-card[hidden] {
+  display: none;
+}
+
+.orvix-portfolio-card img {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+  width: 100%;
+}
+
+.orvix-portfolio-card--video {
+  aspect-ratio: 16 / 9;
+}
+
+.orvix-portfolio-card iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.orvix-portfolio-card:hover img {
+  transform: scale(1.04);
+}
+
+.orvix-portfolio-card figcaption {
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.65));
+  bottom: 0;
+  color: #fff;
+  font-size: 14px;
+  left: 0;
+  padding: 24px 16px 14px;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+  text-transform: capitalize;
+}
+
+.orvix-portfolio-status {
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  width: 1px;
+}
+
+.orvix-portfolio-lightbox {
+  background: #fff;
+  border: 0;
+  box-sizing: border-box;
+  color: #171717;
+  height: 100vh;
+  height: 100dvh;
+  margin: 0;
+  max-height: none;
+  max-width: none;
+  overflow: hidden;
+  padding: 0;
+  width: 100vw;
+}
+
+.orvix-portfolio-lightbox::backdrop {
+  background: #fff;
+}
+
+.orvix-portfolio-lightbox[open] {
+  display: grid;
+}
+
+.orvix-portfolio-lightbox-layout {
+  display: grid;
+  grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.2fr);
+  height: 100%;
+}
+
+.orvix-portfolio-lightbox-details {
+  align-self: center;
+  padding: clamp(32px, 6vw, 96px);
+}
+
+.orvix-portfolio-lightbox-category {
+  color: #a57c35;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.orvix-portfolio-lightbox-details h2 {
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.12;
+  margin: 0 0 20px;
+}
+
+.orvix-portfolio-lightbox-details > p:not(.orvix-portfolio-lightbox-category) {
+  color: #5a5a5a;
+  font-size: 17px;
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+.orvix-portfolio-lightbox .orvix-portfolio-lightbox-contact {
+  background: transparent;
+  color: #171717;
+  display: inline-block;
+  font-weight: 600;
+  padding: 0 0 6px;
+  text-decoration: none;
+  border-bottom: 1px solid #b78d43;
+}
+
+.orvix-portfolio-lightbox .orvix-portfolio-lightbox-contact:hover {
+  background: transparent;
+  color: #000 !important;
+}
+
+.orvix-portfolio-lightbox .orvix-portfolio-lightbox-close {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 50%;
+  color: #171717;
+  cursor: pointer;
+  display: flex;
+  font: inherit;
+  font-size: 30px;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0 0 4px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  width: 48px;
+  z-index: 1;
+}
+
+.orvix-portfolio-lightbox .orvix-portfolio-lightbox-close:focus {
+  border: 0;
+}
+
+.orvix-portfolio-lightbox-image-panel {
+  align-items: center;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  min-height: 0;
+  overflow: hidden;
+  padding: 36px;
+}
+
+.orvix-portfolio-lightbox-image-panel img {
+  height: auto;
+  max-height: calc(100dvh - 96px);
+  max-width: 100%;
+  object-fit: contain;
+  width: auto;
+}
+
+.orvix-portfolio-lightbox-close:focus-visible,
+.orvix-portfolio-lightbox-contact:focus-visible {
+  outline: 2px solid #171717;
+  outline-offset: 3px;
+}
+
+@media (max-width: 767px) {
+  .orvix-portfolio-gallery {
+    padding: 44px 18px;
+  }
+
+  .orvix-portfolio-filters {
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .orvix-portfolio-filters button {
+    padding: 8px 14px;
+  }
+
+  .orvix-portfolio-grid {
+    gap: 10px;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .orvix-portfolio-lightbox {
+    overflow-y: auto;
+  }
+
+  .orvix-portfolio-lightbox-layout {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr);
+    min-height: 100%;
+  }
+
+  .orvix-portfolio-lightbox-details {
+    padding: 76px 24px 20px;
+  }
+
+  .orvix-portfolio-lightbox-details h2 {
+    font-size: clamp(28px, 8vw, 40px);
+  }
+
+  .orvix-portfolio-lightbox-details > p:not(.orvix-portfolio-lightbox-category) {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .orvix-portfolio-lightbox-image-panel {
+    min-height: 40vh;
+    padding: 12px 18px 24px;
+  }
+
+  .orvix-portfolio-lightbox-image-panel img {
+    max-height: 45vh;
+  }
+
+  .orvix-portfolio-lightbox-close {
+    right: 16px;
+    top: 16px;
+  }
 }
