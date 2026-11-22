@@ -91,8 +91,19 @@
   };
 
   const items = [
-    ...images.map((image) => ({ ...image, type: "image" })),
-    ...shuffle(videos)
+    ...images.map((image) => ({
+      ...image,
+      type: "image",
+      categories: [
+        image.category,
+        "photography",
+        ...(image.description.toLowerCase().includes("event") ? ["event"] : [])
+      ]
+    })),
+    ...shuffle(videos.map((video) => ({
+      ...video,
+      categories: [video.category]
+    })))
   ];
 
   const allCategoryLimit = 4;
@@ -102,6 +113,7 @@
       ? "orvix-portfolio-card orvix-portfolio-card--video"
       : "orvix-portfolio-card";
     card.dataset.category = item.category;
+    card.dataset.categories = item.categories.join(" ");
     card.setAttribute("role", "listitem");
 
     if (item.type === "video") {
@@ -148,10 +160,11 @@
 
     cards.forEach((card) => {
       const cardCategory = card.dataset.category;
+      const cardCategories = card.dataset.categories.split(" ");
       const categoryCount = categoryCounts.get(cardCategory) || 0;
       const isVisible = category === "all"
         ? categoryCount < allCategoryLimit
-        : cardCategory === category;
+        : cardCategories.includes(category);
       card.hidden = !isVisible;
       if (isVisible) {
         visibleCount += 1;
