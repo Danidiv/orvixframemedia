@@ -336,17 +336,18 @@
 
 .orvix-portfolio-lightbox .orvix-portfolio-lightbox-contact {
   background: transparent;
-  color: #171717;
+  color: var(--orvix-accent-rust) !important;
   display: inline-block;
   font-weight: 600;
   padding: 0 0 6px;
   text-decoration: none;
-  border-bottom: 1px solid var(--orvix-accent-bronze);
+  border-bottom: 1px solid var(--orvix-accent-rust);
 }
 
 .orvix-portfolio-lightbox .orvix-portfolio-lightbox-contact:hover {
   background: transparent;
-  color: #000 !important;
+  color: var(--orvix-accent-bronze) !important;
+  border-bottom-color: var(--orvix-accent-bronze);
 }
 
 .orvix-portfolio-lightbox .orvix-portfolio-lightbox-close {

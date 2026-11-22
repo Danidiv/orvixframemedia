@@ -63,7 +63,7 @@
   });
 
   const replacementVideos = [
-    { videoId: "xRVTNaIZLB0", title: "Orvixframemedia Video" }
+    { videoId: "xRVTNaIZLB0", title: "Videography" }
   ];
 
   const videos = replacementVideos
